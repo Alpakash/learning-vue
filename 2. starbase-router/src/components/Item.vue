@@ -3,7 +3,7 @@
   <div class="item-card">
     <div class="card-block">
       <h4 class="card-title">{{item.name}}</h4>
-      <div v-for="(value, key, index) in item">
+      <div v-for="(value, key, index) in item" :key="key" >
         <div v-if="index < 5">
           <strong>{{key}}</strong>: {{value}}
         </div>
@@ -24,7 +24,7 @@ export default {
   methods: {
     switchItem() {
       let random_id = Math.floor(Math.random() * 63) + 1
-      fetch(`http://swapi.co/api/${this.type}/${random_id}`, {
+      fetch(`http://swapi.dev/api/${this.type}/${random_id}`, {
         method: "GET"
       })
         .then(response => response.json())
