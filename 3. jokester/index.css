@@ -1,0 +1,11 @@
+#app {
+    font-family: 'Avenir', Helvetica, sans-serif;
+}
+
+.joke-card {
+    border: 2px solid #2C3350;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 5px;
+    text-align: center;
+}
